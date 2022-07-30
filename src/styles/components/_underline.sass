@@ -1,0 +1,16 @@
+// link with underline
+
+a.underline:not(.no-hover)
+    position: relative
+    &:before
+        position: absolute
+        bottom: -3px
+        content: ''
+        width: 0%
+        height: 1.5px
+        background: $color--primary
+        opacity: 0
+        transition: opacity .6s, width .3s
+    &:hover:before
+        width: 100%
+        opacity: 1

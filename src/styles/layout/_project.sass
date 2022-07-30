@@ -1,0 +1,70 @@
+.project
+    position: relative
+    display: grid
+    box-shadow: 0 0 0 1px #303030
+
+    &__description__container
+
+        text-align: right
+        position: absolute
+        bottom: 16px
+        right: 16px
+        opacity: .5
+        transform: translateX(200%)
+        transition-timing-function: ease-in-out
+        transition: .5s
+
+    &__content
+        position: relative
+        color: $color--primary
+        overflow: hidden
+
+        &:hover  .project__description__container
+            transform: translateX(0%)
+            opacity: 1
+
+    &__image
+        overflow: hidden
+        display: block
+        object-fit: cover
+        width: 100%
+        height: 100%
+        opacity: 1
+        transition: transform .3s, opacity .3s
+
+        &:hover
+            transform: scale(1.1)
+            opacity: 0.8
+
+    &__name
+        line-height: 39px
+
+    &__year
+        font-size: 14px
+
+@media screen and (max-width: 950px)
+    .project
+        grid-template-columns: 1fr !important
+        grid-area: unset !important
+
+        &__content
+            grid-template-rows: 1fr 90px
+            display: grid
+            overflow: unset
+            grid-row: 1 / 3
+            // gap: 20px
+            padding-top: 52px
+            // width: calc(100vw - 120px);
+
+        &__description__container
+            text-align: left
+            position: unset
+            transform: unset
+            opacity: unset
+            transition: unset
+            padding-left: 15vw
+
+        
+        // &__image:hover
+        //     transform: unset
+        //     opacity: unset

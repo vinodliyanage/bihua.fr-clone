@@ -1,0 +1,23 @@
+// scroll top component
+
+.scroll-top
+    height: 32px
+    width: 32px
+    border-bottom: 1px solid grey
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: auto
+    position: absolute
+    right: 0
+    top: 16px
+
+    &:before
+        content: '↑'
+        margin-bottom: 3px
+        transition: .3s
+
+    &:hover:before
+        transform: translateY(-10px)
+    &:hover
+        border-bottom: 1px solid $color--primary
