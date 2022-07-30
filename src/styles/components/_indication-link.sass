@@ -1,0 +1,26 @@
+.indication-link
+    position: absolute
+    width: 64px
+    height: 64px
+    border: 1px solid grey
+    border-radius: 50%
+    opacity: .5
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    transition: .3s
+
+    &::before
+        content: '↗'
+        font-size: 2.5rem
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+    &:hover,
+    &:focus
+        background: $color--secondary
+        opacity: 1
+        transform: translate(25%,-25%)

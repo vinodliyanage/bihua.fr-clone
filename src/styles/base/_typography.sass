@@ -6,7 +6,9 @@ body
     font-family: "SuisseIntl", Arial, Helvetica, sans-serif
     font-weight: 400
 
-h1
+h1,
+.h1
+    display: block
     font-size: 9rem
     font-family: "GrandSlang", Arial, Helvetica, sans-serif
     font-weight: 400
@@ -14,26 +16,39 @@ h1
     color: $color--primary
 
 h2,
-label
+.h2,
+    display: block
+    
+h2,
+.h2,
+label,
+.label
     font-size: 1.6rem
     margin-bottom: 1.6rem
     font-weight: 400
     color: $color--secondary
     text-transform: capitalize
 
-label
+label,
+.label
     color: $color--primary
 
-h3
+h3,
+.h3
+    display: block
     font-size: 3rem
     font-weight: 400
 
-p
+p,
+.p
+    display: block
     font-size: 2.5rem
-    line-height: 2rem
+    // line-height: 2rem
+    line-height: 3rem
     color: $color--primary
 
-a
+a,
+.a
     color: $color--primary
     font-size: 1.6rem
     text-decoration: none
@@ -47,15 +62,20 @@ li
 
     
 @media screen and (max-width: 768px)
-    h1
+    h1,
+    .h1
         font-size: 3.4rem
         margin-bottom: 1.6rem
     h2,
-    label
+    .h2,
+    label,
+    .label
         font-size: 1.2rem
-    h3
+    h3,
+    .h3
         font-size: 2rem
-    p
+    p,
+    .p
         font-size: 1.6rem
 
     
