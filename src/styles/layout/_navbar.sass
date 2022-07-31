@@ -1,23 +1,18 @@
-*
-    margin: 0
-    box-sizing: border-box
+$navbar-background-color: transparent
+$navbar-item-hover-background-color: unset
+$navbar-item-hover-color: $color--primary
+$navbar-item-color: $color--primary
 
 .navbar
     padding-top: 70px
     align-items: center !important
 
+    @include mobile
+        padding-top: 32px
+
     .logo
         font-weight: 700
         height: 2.4rem
 
-
-    &__item
+    &-item
         margin: 0 0 0 64px
-
-@media screen and (max-width: 768px)
-    .navbar
-        padding-top: 32px
-
-$navbar-background-color: $bg
-
-

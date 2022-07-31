@@ -1,17 +1,18 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import logo from '../../images/logo.svg'
+import logo from "../../images/logo.svg";
 
 function NavBar() {
   return (
     <header>
-      <nav className="navbar block" role="navigation" aria-label="main navigation">
+      <nav
+        className="navbar block"
+        role="navigation"
+        aria-label="main navigation"
+      >
         <div className="navbar-brand">
-          <Link className="no-hover" to="/index" >
-            <img
-              className="logo"
-              src={logo}
-            />
+          <Link to="/index">
+            <img className="logo" src={logo} />
           </Link>
 
           <a
@@ -21,20 +22,21 @@ function NavBar() {
             aria-expanded="false"
             data-target="navbarBasicExample"
           >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+            <p>menu</p>
           </a>
-
         </div>
 
         <div id="navbarMenu" className="navbar-menu">
           <div className="navbar-end">
-            <div className="navbar__menu__container">
-              <Link className="navbar__item underline" to="/studio">Studio</Link>
-              <Link className="navbar__item underline" to="/realisations">Réalisations</Link>
-              <Link className="navbar__item underline" to='/contact'>Contact</Link>
-            </div>
+            <Link className="navbar-item underline" to="/studio">
+              Studio
+            </Link>
+            <Link className="navbar-item underline" to="/realisations">
+              Réalisations
+            </Link>
+            <Link className="navbar-item underline" to="/contact">
+              Contact
+            </Link>
           </div>
         </div>
       </nav>
