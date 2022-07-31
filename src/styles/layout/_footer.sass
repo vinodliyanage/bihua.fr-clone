@@ -1,17 +1,9 @@
-$margin-bottom: 80px
-$line-height: 3.3rem
-$title-size: 1.6rem
-$content-size: 2.5rem
-
-// footer bulma varibales
-
-$footer-background-color: $bg
+$footer-background-color: transparent
 $footer-padding: 0
-
 
 .footer
     margin-bottom: 80px
-    line-height: $line-height
+    background-color: transparent
 
     a
         font-size: 2.5rem
@@ -19,22 +11,17 @@ $footer-padding: 0
     h2
         margin-bottom: 16px
 
-    ul
-        margin: 0
-
     li
         margin-right: 30px
 
     .columns
         position: relative
         margin: 0
-        
+
     .column
         padding: 0
 
-
-
-@media screen and (max-width: 768px)
+@include mobile
     .footer
         text-align: center
         margin-bottom: 60px
@@ -61,6 +48,3 @@ $footer-padding: 0
 
         .column
             margin-bottom: 32px
-
-
-

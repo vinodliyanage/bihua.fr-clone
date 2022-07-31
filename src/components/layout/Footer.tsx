@@ -3,8 +3,8 @@ import * as React from "react";
 function Footer() {
   return (
     <footer className="footer block">
-      <div className="columns content">
-        <div className="column footer__address">
+      <div className="columns">
+        <div className="column">
           <h2>Adresse</h2>
           <p>
             11 place Antonin Poncet
@@ -13,19 +13,19 @@ function Footer() {
             France
           </p>
         </div>
-        <div className="column footer__email">
-          <h2>Email</h2>{" "}
+        <div className="column">
+          <h2>Email</h2>
           <a href="mailto:hello@bihua.fr" className="underline">
             hello@bihua.fr
           </a>
         </div>
-        <div className="column footer__telephone">
+        <div className="column">
           <h2>Téléphone</h2>
           <a href="tel:+33 (0)9 81 14 69 00">
             +33 (0)9 81 14 69 00
           </a>
         </div>
-        <div className="column footer__reseaux">
+        <div className="column">
           <h2>Réseaux</h2>
           <ul className="columns is-mobile">
             <li>
