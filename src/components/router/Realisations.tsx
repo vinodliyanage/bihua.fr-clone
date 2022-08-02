@@ -1,15 +1,13 @@
-import * as React from "react";
-import Hero from "../layout/Hero";
+import React from "react";
+import Hero from "../layout/HeroTitle";
 import Projects from "../layout/Projects";
 import { ProjectsInterface } from "../../models/ProjectsInterface";
 
 // TODO: add lazy loading images
 
-function Realisations(props: ProjectsInterface) {
-  console.log(props)
-
+const Realisations: React.FC<ProjectsInterface> = (props) => {
   return (
-    <div className="realisations">
+    <section className="realisations">
       <Hero
         title="Bihua Transforme vos idées - en image"
         className="realisations block"
@@ -18,9 +16,11 @@ function Realisations(props: ProjectsInterface) {
         <span className="word shift-right">vos idées — en image</span>
       </Hero>
 
-      <Projects projectsGrid={props.projectsGrid}/>
-    </div>
+      <section className="realisations__projects">
+        <Projects projectsGrid={props.projectsGrid} rowSize={34} />
+      </section>
+    </section>
   );
-}
+};
 
 export default Realisations;

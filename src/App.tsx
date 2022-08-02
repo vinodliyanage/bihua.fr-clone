@@ -13,7 +13,7 @@ import Error from "./components/layout/Error";
 // import { GridInterface } from "./models/GridInterface";
 // import shuffle from "./utils/shuffle";
 
-function App() {
+const App: React.FC = () => {
   // const [grid, setGrid] = useState<GridInterface[]>(() => shuffle(getGrid()));
   // const [seconds, setSeconds] = useState(0);
 
@@ -33,14 +33,14 @@ function App() {
   return (
     <React.Fragment>
       <Router>
-        <NavBar />
+      <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/index" element={<Home />} />
+          <Route path="/" element={<Home projectsGrid={projectsGrid} rowSize={12}/>} />
+          <Route path="/index" element={<Home projectsGrid={projectsGrid} rowSize={12}/>} />
           <Route path="/studio" element={<Studio />} />
           <Route
             path="/realisations"
-            element={<Realisations projectsGrid={projectsGrid} />}
+            element={<Realisations projectsGrid={projectsGrid} rowSize={34}/>}
           />
           <Route path="/contact" element={<Contact />} />
           <Route path="/error-404" element={<Error />} />

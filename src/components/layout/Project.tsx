@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { GridInterface } from "../../models/GridInterface";
 import { ProjectInterface } from "../../models/ProjectInterface";
 
@@ -7,10 +7,8 @@ interface ProjectProps {
   grid: GridInterface;
 }
 
-export function Project(props: ProjectProps) {
+const Project: React.FC<ProjectProps> = (props) => {
   const { project, grid } = props;
-
-  // console.log(project, grid);
 
   const alt = `bihua.fr ${project.name} ${project.year}`;
   return (
@@ -25,6 +23,6 @@ export function Project(props: ProjectProps) {
       </a>
     </article>
   );
-}
+};
 
 export default Project;

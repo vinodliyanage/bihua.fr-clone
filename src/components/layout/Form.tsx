@@ -1,6 +1,6 @@
-import * as React from "react";
+import React from "react";
 
-// TODO complete the form submission
+// TODO: complete the form submission
 
 interface FormProps {
   onSubmit: () => void;
@@ -8,7 +8,6 @@ interface FormProps {
 
 const Form: React.FC = () => {
   return (
-    <div className="form-container">
       <form action="">
         <div className="form-wrapper">
           <section>
@@ -56,7 +55,6 @@ const Form: React.FC = () => {
         </div>
         <input className="submit" type="submit" value="submit" name="submit" />
       </form>
-    </div>
   );
 };
 

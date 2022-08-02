@@ -1,8 +1,8 @@
-import * as React from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 
-function NavBar() {
+const NavBar: React.FC = () => {
   return (
     <header>
       <nav
@@ -42,6 +42,6 @@ function NavBar() {
       </nav>
     </header>
   );
-}
+};
 
 export default NavBar;

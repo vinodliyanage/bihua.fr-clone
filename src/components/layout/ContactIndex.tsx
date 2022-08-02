@@ -1,15 +1,15 @@
-import * as React from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-
-function ContactIndex() {
+const ContactIndex: React.FC = () => {
   return (
-    <section className="contact-index block">
+    <div className="contact-index">
       <div className="columns">
         <div className="column is-3">
           <h2>contact</h2>
         </div>
         <div className="column">
+          {/* TODO: fix the indication link */}
           <Link to="/contact" className="h1">
             Une idée de projet
           </Link>
@@ -20,7 +20,7 @@ function ContactIndex() {
           <Link to="/contact" className="indication-link"></Link>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

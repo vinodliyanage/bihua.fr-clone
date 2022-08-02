@@ -1,9 +1,7 @@
-import * as React from 'react';
+import React from "react";
 
-function Error() {
-    return ( 
-        <h1>error 404</h1>
-     );
-}
+const Error: React.FC = () => {
+  return <h1>error 404</h1>;
+};
 
 export default Error;

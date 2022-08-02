@@ -1,13 +1,10 @@
-import * as React from "react";
-import Hero from "../layout/Hero";
+import React from "react";
+import Hero from "../layout/HeroTitle";
 
-function Studio() {
+const Studio: React.FC = () => {
   return (
     <div className="studio block">
-      <Hero
-        title="Bihua Transforme vos idées - en image"
-        className="studio"
-      >
+      <Hero title="Bihua Transforme vos idées - en image" className="studio">
         <span className="word">Apprendre les règles </span>
         <span className="word shift-right"> comme un professionnel </span>
         <span className="word"> et les enfreindre comme </span>
@@ -15,6 +12,6 @@ function Studio() {
       </Hero>
     </div>
   );
-}
+};
 
 export default Studio;

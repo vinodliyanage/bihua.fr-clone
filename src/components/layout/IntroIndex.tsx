@@ -1,16 +1,15 @@
-import * as React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function IntroIndex() {
-  const [isClick, setClick] = useState(false);
+const IntroIndex: React.FC = () => {
+  const [isExpand, setExpand] = useState(false);
 
-  const handleClick = () => {
-    setClick(!isClick);
+  const handleExpand = () => {
+    setExpand(!isExpand);
   };
 
   return (
-    <section className="intro-index">
+    <div className="intro-index">
       <div className="columns">
         <div className="column is-2"></div>
         <div className="column">
@@ -39,7 +38,7 @@ function IntroIndex() {
             identité visuelle et développons les meilleures solutions pour
             diffuser leur image de marque sur le web.
           </p>
-          {isClick && (
+          {isExpand && (
             <p>
               Notre équipe est composée de passionnés d’arts graphiques et de
               nouvelles technologies. Ils engagent au service de chaque projet
@@ -49,8 +48,8 @@ function IntroIndex() {
               entreprise doit être clair et affirmé.
             </p>
           )}
-          {!isClick ? (
-            <span className="expand h2" onClick={handleClick}>
+          {!isExpand ? (
+            <span className="expand h2" onClick={handleExpand}>
               Lire la suite
             </span>
           ) : (
@@ -64,8 +63,8 @@ function IntroIndex() {
           )}
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
 
 export default IntroIndex;

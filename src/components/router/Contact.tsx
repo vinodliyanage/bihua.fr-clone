@@ -1,7 +1,7 @@
-import * as React from "react";
-import Form from '../layout/Form';
+import React from "react";
+import Form from "../layout/Form";
 
-function Contact() {
+const Contact: React.FC = () => {
   return (
     <div className="contact block">
       <h1 aria-label="Hello">Hello</h1>
@@ -9,9 +9,11 @@ function Contact() {
         Vous avez une idée de projet ? Nous sommes curieux de la connaître,
         racontez-nous.
       </p>
-      <Form />
+      <section className="contact__form">
+        <Form />
+      </section>
     </div>
   );
-}
+};
 
 export default Contact;

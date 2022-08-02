@@ -1,6 +1,6 @@
-import * as React from "react";
+import React from "react";
 
-function Footer() {
+const Footer: React.FC = () => {
   return (
     <footer className="footer block">
       <div className="columns">
@@ -21,9 +21,7 @@ function Footer() {
         </div>
         <div className="column">
           <h2>Téléphone</h2>
-          <a href="tel:+33 (0)9 81 14 69 00">
-            +33 (0)9 81 14 69 00
-          </a>
+          <a href="tel:+33 (0)9 81 14 69 00">+33 (0)9 81 14 69 00</a>
         </div>
         <div className="column">
           <h2>Réseaux</h2>
@@ -66,6 +64,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
