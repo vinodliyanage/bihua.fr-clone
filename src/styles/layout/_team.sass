@@ -1,0 +1,56 @@
+.team
+    padding-top: 166px
+    padding-bottom: 166px
+    background: $color--primary
+
+    &__wrapper
+        display: grid
+        width: 60%
+        grid-template-columns: repeat(2, 1fr)
+        row-gap: 100px
+
+    &__member
+        width: max-content
+        margin-left: 120px
+
+        h2
+            font-size: 2rem
+            position: relative
+            z-index: 2
+        p
+            font-size: 3.5rem
+            text-decoration: underline solid
+            mix-blend-mode: difference
+            position: relative
+            z-index: 2
+
+    @include mobile
+        padding-left: 0
+        padding-bottom: 0
+        padding-top: 32px
+
+        p
+            font-size: 2rem
+
+        h2
+            font-size: 1.2rem
+            margin-bottom: 8px
+
+        &__member
+            margin-left: 60px
+            margin-bottom: 24px
+
+        &__wrapper
+            width: 100%
+            grid-template-columns: 1fr
+            row-gap: 0
+
+.hover-image
+    opacity: 0
+    pointer-events: none !important //? this is important for the event handler to work properly.
+    position: absolute
+    transform: translate(-50%, -50%)
+    border-radius: 50%
+    width: 100px
+    z-index: 1
+    transition: width .3s, border-radius .3s, opacity .4s
