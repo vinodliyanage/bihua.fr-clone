@@ -1,0 +1,43 @@
+.base
+
+    &__origin
+        h2
+            font-size: 2rem
+
+    &__portrait
+        position: relative
+        margin-top: 240px
+        margin-bottom: 300px
+        flex: none
+        width: 55%
+
+        q
+            z-index: 10
+            font-size: 6rem
+            line-height: 80px
+            mix-blend-mode: difference
+
+        img
+            position: absolute
+            z-index: -10
+            top: -60px
+            left: -130px
+            height: 1000px
+            transform: rotate(0.9deg)
+
+        @include mobile
+            margin-top: 60px
+            margin-bottom: 20px
+
+            display: flex
+            justify-content: center
+
+            img
+                height: 428px
+                top: -120px
+                left: 50px
+                transform: rotate(3deg)
+
+            q
+                font-size: 3rem
+                line-height: 3.3rem
