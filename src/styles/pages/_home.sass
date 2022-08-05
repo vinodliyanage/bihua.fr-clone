@@ -1,2 +1,32 @@
-.hero__home
-    margin-top: 200px;
+.home
+
+    &__hero
+        margin-top: 200px
+        position: relative
+        margin-bottom: 200px
+
+    &__intro
+        margin-top: 260px
+
+    &__projects
+        grid-template-rows: repeat(14,9vh)
+        margin: 350px 0
+
+
+
+    @include mobile
+
+        &__hero
+            margin-top: 100px
+            margin-bottom: 0
+            
+        &__intro
+            margin-top: 176px
+
+        &__projects
+            margin-bottom: 125px
+            margin-top: 122px
+
+            .link
+                display: flex
+                justify-content: center
