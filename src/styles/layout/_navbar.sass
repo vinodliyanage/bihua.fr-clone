@@ -7,12 +7,16 @@ $navbar-item-color: $color--primary
     padding-top: 70px
     align-items: center !important
 
-    @include mobile
-        padding-top: 32px
-
     .logo
         font-weight: 700
         height: 2.4rem
 
     &-item
         margin: 0 0 0 64px
+        padding: 0 !important // override bulma css
+
+    @include mobile
+        padding-top: 32px
+
+        .logo
+            height: 2rem
