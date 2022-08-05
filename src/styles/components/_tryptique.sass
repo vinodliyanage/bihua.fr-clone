@@ -1,0 +1,27 @@
+.tryptique
+    position: absolute
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    width: calc(min(40vw, 550px))
+    top: 0px
+    right: 65px
+    gap: 16px
+    z-index: -999
+    opacity: .9
+
+.tryp
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.go-top
+    margin-top: -60px
+
+@include mobile
+    .tryptique
+        left: 0
+        right: 0
+        width: 100%
+
+    .go-top
+        margin-top: -30px
