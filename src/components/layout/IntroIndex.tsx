@@ -27,7 +27,7 @@ const IntroIndex: React.FC = () => {
       </div>
       <div className="columns">
         <div className="column is-6"></div>
-        <div className="column is-4">
+        <div className="column is-5">
           <h2>Philosophie</h2>
           <p>
             Notre studio, basé à Lyon, est le point de rencontre entre
@@ -53,13 +53,13 @@ const IntroIndex: React.FC = () => {
               Lire la suite
             </span>
           ) : (
-            <div className="circle-link">
-              <div className="circle"></div>
-              <Link className="link p" to="/studio">
-                Le studio
-              </Link>
-              <hr className="" />
-            </div>
+            <Link className="link" to="/studio">
+              <div className="circle-link">
+                <div className="circle"></div>
+                <span className="p">Le studio</span>
+                <hr />
+              </div>
+            </Link>
           )}
         </div>
       </div>
