@@ -6,6 +6,7 @@ const NavBar: React.FC = () => {
   return (
     <header>
       <nav
+        id="navbar"
         className="navbar block"
         role="navigation"
         aria-label="main navigation"
