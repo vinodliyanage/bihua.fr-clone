@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ProjectsInterface } from "../../models/ProjectsInterface";
 import ContactIndex from "../layout/ContactIndex";
-import HeroTitle from "../layout/HeroTitle";
+import Title from "../layout/Title";
 import IntroIndex from "../layout/IntroIndex";
 import Projects from "../layout/Projects";
 import Tryptique from "../layout/Tryptique";
@@ -17,15 +17,12 @@ const Home: React.FC<ProjectsInterface> = (props) => {
 
   return (
     <div className="home">
-      <section className="home__home block">
-        <HeroTitle
-          title="Bihua Transforme vos idées - en image"
-          className="home"
-        >
+      <section className="home__hero block">
+        <h1 className="title">
           <span className="word">Studio créatif lyonnais</span>
           <span className="word">spécialisé dans les</span>
           <span className="word">solutions digitales</span>
-        </HeroTitle>
+        </h1>
         <Tryptique />
       </section>
 
@@ -43,6 +40,7 @@ const Home: React.FC<ProjectsInterface> = (props) => {
           </Link>
           <hr className="" />
         </div>
+        
       </section>
 
       <section className="home__contact block">
