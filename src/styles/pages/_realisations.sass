@@ -1,6 +1,19 @@
-.hero__realisations
-    margin: 154px 140px 140px
+.realisations
+    &__hero
+        margin: 154px 140px 140px
 
-@media screen and (max-width: 768px)
-    .hero__realisations
-        margin: 71px 20px 86px
+    &__projects
+        margin-bottom: 500px
+
+    @include mobile
+        &__hero
+            margin: 71px 20px 86px
+
+            .word:first-child
+                width: max-content
+
+            .word:last-child
+                text-align: right
+                
+        &__projects
+            margin-bottom: 130px
