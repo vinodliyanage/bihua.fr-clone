@@ -19,20 +19,20 @@
         left: 50%
         transform: translate(-50%, -50%)
 
-    &:hover,
-    &:focus
+    .indication-link-wrapper:hover &,
+    .indication-link-wrapper:focus &
         background: $color--secondary
         opacity: 1
         transform: translate(25%,-25%)
 
     @include mobile
         transform: scale(.8)
-        
+
         &::before
             font-size: 1.6rem
 
-        &:hover,
-        &:focus
+        .indication-link-wrapper:hover &,
+        .indication-link-wrapper:focus &
             background: $color--secondary
             opacity: 1
             transform: scale(.8) translate(0,-25%)
