@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
           </ul>
         </div>
         <div>
-          <a href="" className="scroll-top"></a>
+          <a href="#navbar" className="scroll-top"></a>
         </div>
       </div>
     </footer>
