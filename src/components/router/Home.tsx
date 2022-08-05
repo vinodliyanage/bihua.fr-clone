@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ProjectsInterface } from "../../models/ProjectsInterface";
 import ContactIndex from "../layout/ContactIndex";
-import Title from "../layout/Title";
 import IntroIndex from "../layout/IntroIndex";
 import Projects from "../layout/Projects";
 import Tryptique from "../layout/Tryptique";
