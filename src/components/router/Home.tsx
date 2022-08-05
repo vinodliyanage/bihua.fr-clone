@@ -34,12 +34,12 @@ const Home: React.FC<ProjectsInterface> = (props) => {
         <Projects projectsGrid={projectsGrid} rowSize={12} />
         <div className="columns">
           <div className="column is-9"></div>
-          <div className="circle-link column is-3">
-            <div className="circle"></div>
-            <Link className="link p" to="/realisations">
-              Voir tous les projets
-            </Link>
-          </div>
+          <Link className="link column is-3" to="/realisations">
+            <div className="circle-link">
+              <div className="circle"></div>
+              <span className="p">Voir tous les projets</span>
+            </div>
+          </Link>
         </div>
       </section>
 
