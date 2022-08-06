@@ -1,6 +1,5 @@
-.hero
-  display: block
-  color: $color--primary
+.title
+  letter-spacing: .3rem
 
 .word
   display: inline-block
@@ -8,8 +7,9 @@
 .shift-right
   margin-left: calc(8.3333vw - 32px)
 
-@media screen and (max-width: 768px)
+@include mobile
   .shift-right
     margin-left: calc(21.3333vw - 32px)
 
-
+  .word
+    display: block
