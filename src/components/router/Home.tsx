@@ -30,7 +30,23 @@ const Home: React.FC<ProjectsInterface> = (props) => {
       </section>
 
       <section className="home__projects">
+
+        <div className="home__projects__title">
+          <h2>Projets séléctionnés</h2>
+          <span className="number-animation">
+            <span>0</span>
+            <span className="numbers">
+              <span>0</span>
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+            </span>
+          </span>
+        </div>
+        
         <Projects projectsGrid={projectsGrid} rowSize={12} />
+
         <div className="columns">
           <div className="column is-9"></div>
           <Link className="link column is-3" to="/realisations">
