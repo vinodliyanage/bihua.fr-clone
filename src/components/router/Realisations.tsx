@@ -1,20 +1,18 @@
 import React from "react";
-import Hero from "../layout/HeroTitle";
 import Projects from "../layout/Projects";
 import { ProjectsInterface } from "../../models/ProjectsInterface";
-
-// TODO: add lazy loading images
 
 const Realisations: React.FC<ProjectsInterface> = (props) => {
   return (
     <section className="realisations">
-      <Hero
-        title="Bihua Transforme vos idées - en image"
-        className="realisations block"
-      >
-        <span className="word">Bihua transforme</span>
-        <span className="word shift-right">vos idées — en image</span>
-      </Hero>
+      <section className="realisations__hero">
+        <h1 className="title">
+          <span className="word">Bihua transforme</span>
+          <span className="word shift-right">vos idées</span>
+          <span> </span>
+          <span className="word"> — en image</span>
+        </h1>
+      </section>
 
       <section className="realisations__projects">
         <Projects projectsGrid={props.projectsGrid} rowSize={34} />
