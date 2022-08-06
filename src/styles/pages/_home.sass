@@ -12,20 +12,33 @@
         grid-template-rows: repeat(14,9vh)
         margin: 350px 0
 
+        &__title
+            position: relative
+            width: max-content
+            margin: auto
 
+            h2
+                font-size: 2.5rem
+                color: $color--primary
+                margin-bottom: 120px
 
     @include mobile
 
         &__hero
             margin-top: 100px
             margin-bottom: 0
-            
+
         &__intro
             margin-top: 176px
 
         &__projects
             margin-bottom: 125px
             margin-top: 122px
+
+            &__title
+                h2
+                    font-size: 16px
+                    margin-bottom: 60px
 
             .link
                 display: flex
