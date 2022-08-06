@@ -7,5 +7,6 @@ interface ProjectsGrid {
 }
 
 export interface ProjectsInterface {
-  projectsGrid:ProjectsGrid
+  projectsGrid:ProjectsGrid,
+  rowSize: number;
 }
