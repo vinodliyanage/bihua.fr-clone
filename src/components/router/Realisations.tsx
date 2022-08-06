@@ -13,7 +13,7 @@ const Realisations: React.FC<ProjectsInterface> = (props) => {
           <span className="word"> — en image</span>
         </h1>
       </section>
-
+      //! below element has horizontal scroll 
       <section className="realisations__projects">
         <Projects projectsGrid={props.projectsGrid} rowSize={34} />
       </section>

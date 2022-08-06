@@ -6,7 +6,7 @@ import Team from "../layout/Team";
 
 const Studio: React.FC = () => {
   return (
-    <div className="studio">
+    <section className="studio">
       <section className="studio__hero block">
         <h1 className="title">
           <span className="word">Apprendre les règles </span>
@@ -22,16 +22,17 @@ const Studio: React.FC = () => {
       <section className="studio__base block">
         <Base />
       </section>
+      //! below element has horizontal scroll 
       <section className="studio__team">
         <Team />
-      </section>
-      <section className="studio__passion">
+      </section> 
+     <section className="studio__passion">
         <Passion />
       </section>
-      <section className="studio__final block">
+       <section className="studio__final block">
         <Final />
       </section>
-    </div>
+    </section>
   );
 };
 

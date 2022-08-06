@@ -15,7 +15,7 @@ const Home: React.FC<ProjectsInterface> = (props) => {
   };
 
   return (
-    <div className="home">
+    <section className="home">
       <section className="home__hero block">
         <h1 className="title">
           <span className="word">Studio créatif lyonnais</span>
@@ -29,8 +29,8 @@ const Home: React.FC<ProjectsInterface> = (props) => {
         <IntroIndex />
       </section>
 
+      //! below element has horizontal scroll 
       <section className="home__projects">
-
         <div className="home__projects__title">
           <h2>Projets séléctionnés</h2>
           <span className="number-animation">
@@ -44,7 +44,7 @@ const Home: React.FC<ProjectsInterface> = (props) => {
             </span>
           </span>
         </div>
-        
+
         <Projects projectsGrid={projectsGrid} rowSize={12} />
 
         <div className="columns">
@@ -61,7 +61,7 @@ const Home: React.FC<ProjectsInterface> = (props) => {
       <section className="home__contact block">
         <ContactIndex />
       </section>
-    </div>
+    </section>
   );
 };
 
