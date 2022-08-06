@@ -1,26 +1,23 @@
-.form-container
-    margin-bottom: 160px
+.submit
+    transition: .3s
+    margin-top: 60px
+    height: 50px
+    padding-left: 32px
+    padding-right: 32px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 26px
+    font-size: 16px
+    background-color: transparent
+    border: 1px solid $color--secondary
+    color: $color--primary
+    cursor: pointer
 
-    .submit
-        transition: .3s
-        margin-top: 60px
-        height: 50px
-        padding-left: 32px
-        padding-right: 32px
-        display: flex
-        justify-content: center
-        align-items: center
-        border-radius: 26px
-        font-size: 16px
-        background-color: transparent
-        border: 1px solid $color--secondary
-        color: $color--primary
-        cursor: pointer
-
-        &:focus,
-        &:hover
-            color: $bg
-            background: $color--primary
+    &:focus,
+    &:hover
+        color: $bg
+        background: $color--primary
 
 .form-wrapper
     display: grid
@@ -57,7 +54,7 @@
         display: flex
         flex-direction: column
 
-@media screen and (max-width: 768px)
+@include mobile
     .form-wrapper
         grid-template-columns: 1fr
 
