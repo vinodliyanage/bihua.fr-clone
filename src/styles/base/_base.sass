@@ -9,5 +9,12 @@
 body
     background: $bg
     scroll-behavior: smooth
-    width: 100vw
     height: 100%
+
+//* override bulma css columns
+//? without this fix webpage getting a horizontal scroll when it is on mobile mode.
+    
+.columns
+    margin-left: 0 !important
+    margin-right: 0 !important
+    margin-top: 0 !important
