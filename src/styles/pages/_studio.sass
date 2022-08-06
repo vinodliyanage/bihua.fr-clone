@@ -1,2 +1,36 @@
-.hero__studio
-    margin-top: 154px;
+.studio
+    &__hero
+        margin-top: 154px
+
+    &__base
+        margin-top: 260px
+        margin-bottom: 250px
+
+    &__passion
+        margin-bottom: 160px
+        margin-top: 260px
+
+    &__final
+        margin-bottom: 250px
+
+    @include mobile
+        &__hero
+            margin-top: 100px
+            
+            .word
+                letter-spacing: 0
+                display: inline-block
+
+                &:last-child
+                    float: right
+
+            .shift-right
+                margin-left: 0
+        &__base
+            margin-top: 74px
+            margin-bottom: 102px
+        &__passion
+            margin-bottom: 90px
+            margin-top: 80px
+        &__final
+            margin-bottom: 88px
