@@ -35,15 +35,16 @@ $navbar-breakpoint: $tablet
             &:hover
                 background-color: unset
 
-        &-menu
+        div#{&}-menu
             position: fixed
             top: -100vh
             left: 0
             width: 100%
             height: 100vh
-            background-color: $color--primary !important // override bulma css
+            max-height: unset !important  // this will fix mobile responsive issue
+            background-color: $color--primary
             z-index: -100
-            display: flex !important
+            display: flex 
             flex-direction: column
             justify-content: center
             transition: transform .6s
