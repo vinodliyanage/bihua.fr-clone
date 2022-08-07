@@ -58,10 +58,13 @@
     .form-wrapper
         grid-template-columns: 1fr
 
-        .textarea::placeholder
-            font-size: 2rem
-            line-height: 2
-            letter-spacing: .5px
+        .textarea
+            height: auto
+            
+            &::placeholder
+                font-size: 2rem
+                line-height: 2
+                letter-spacing: .5px
 
         .input::-webkit-input-placeholder
             font-size: 2rem
