@@ -22,7 +22,6 @@ const Studio: React.FC = () => {
       <section className="studio__base block">
         <Base />
       </section>
-      //! below element has horizontal scroll 
       <section className="studio__team">
         <Team />
       </section> 

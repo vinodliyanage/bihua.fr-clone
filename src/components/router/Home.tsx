@@ -29,7 +29,6 @@ const Home: React.FC<ProjectsInterface> = (props) => {
         <IntroIndex />
       </section>
 
-      //! below element has horizontal scroll 
       <section className="home__projects">
         <div className="home__projects__title">
           <h2>Projets séléctionnés</h2>
