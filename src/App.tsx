@@ -10,25 +10,12 @@ import getGrid from "./data/grid";
 import getProjects from "./data/projects";
 import Error from "./components/layout/Error";
 
-// import { GridInterface } from "./models/GridInterface";
-// import shuffle from "./utils/shuffle";
-
 const App: React.FC = () => {
-  // const [grid, setGrid] = useState<GridInterface[]>(() => shuffle(getGrid()));
-  // const [seconds, setSeconds] = useState(0);
 
   const projectsGrid = {
     projects: getProjects(),
     grid: getGrid(),
   };
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setSeconds(seconds + 1);
-  //     setGrid(shuffle(grid));
-  //   }, 180000);
-  //   return () => clearInterval(interval);
-  // }, [seconds, grid]);
 
   return (
     <React.Fragment>
