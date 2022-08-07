@@ -54,6 +54,8 @@ $navbar-item-color: $color--primary
             @for $i from 1 through 3
                 &:nth-child(#{$i})
                     transition: opacity 2s $i * .2s, transform .6s $i * .2s
+            &:hover
+                color: $bg
 
         &-menu.show
             transform: translate(0, 100vh)
