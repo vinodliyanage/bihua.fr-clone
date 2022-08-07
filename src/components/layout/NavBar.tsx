@@ -1,13 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 
 const NavBar: React.FC = () => {
+  const defaultActiveStates = {
+    studio: false,
+    realisations: false,
+    contact: false,
+  };
+
+  const [isShow, setShow] = useState(false);
+  const [isActive, setActive] = useState(defaultActiveStates);
+
+  const handleShow = () => setShow(!isShow);
+  const handleActive = (id: string) => {
+    setActive({
+      ...defaultActiveStates,
+      [id]: true,
+    });
+
+    const timeout = setTimeout(() => {
+      setShow(false);
+      clearTimeout(timeout);
+    }, 1200);
+  };
+
+  const getNavItemStyles = (id: string) =>
+    `navbar-item underline ${(isActive as any)[id] && "active"} ${
+      isShow && "show"
+    }`;
+
   return (
     <header>
       <nav
         id="navbar"
-        className="navbar block"
+        className={`navbar block ${isShow && "is-fixed-top"}`}
         role="navigation"
         aria-label="main navigation"
       >
@@ -20,22 +47,33 @@ const NavBar: React.FC = () => {
             role="button"
             className="navbar-burger"
             aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
+            onClick={handleShow}
           >
-            <p>menu</p>
+            <p>{isShow ? "fermer" : "menu"}</p>
           </a>
         </div>
 
-        <div id="navbarMenu" className="navbar-menu">
+        <div id="navbarMenu" className={`navbar-menu ${isShow && "show"}`}>
           <div className="navbar-end">
-            <Link className="navbar-item underline" to="/studio">
+            <Link
+              className={getNavItemStyles("studio")}
+              to="/studio"
+              onClick={() => handleActive("studio")}
+            >
               Studio
             </Link>
-            <Link className="navbar-item underline" to="/realisations">
+            <Link
+              className={getNavItemStyles("realisations")}
+              to="/realisations"
+              onClick={() => handleActive("realisations")}
+            >
               Réalisations
             </Link>
-            <Link className="navbar-item underline" to="/contact">
+            <Link
+              className={getNavItemStyles("contact")}
+              to="/contact"
+              onClick={() => handleActive("contact")}
+            >
               Contact
             </Link>
           </div>
