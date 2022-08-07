@@ -22,7 +22,7 @@ const NavBar: React.FC = () => {
     const timeout = setTimeout(() => {
       setShow(false);
       clearTimeout(timeout);
-    }, 1200);
+    }, 1300);
   };
 
   const getNavItemStyles = (id: string) =>
