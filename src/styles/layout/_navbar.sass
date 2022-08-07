@@ -12,16 +12,16 @@ $navbar-breakpoint: $tablet
         font-weight: 700
         height: 2.4rem
 
-    .logo,
-    &-burger p
-        mix-blend-mode: difference
-
     &-item
         margin: 0 0 0 64px
         padding: 0 !important // override bulma css
 
     @include mobile
         padding-top: 32px
+
+        .logo,
+        &-burger p
+            mix-blend-mode: difference
 
         .logo
             height: 2rem
