@@ -22,12 +22,12 @@ const App: React.FC = () => {
       <Router>
       <NavBar />
         <Routes>
-          <Route path="/" element={<Home projectsGrid={projectsGrid} rowSize={12}/>} />
-          <Route path="/index" element={<Home projectsGrid={projectsGrid} rowSize={12}/>} />
+          <Route path="/" element={<Home projectsGrid={projectsGrid}/>} />
+          <Route path="/index" element={<Home projectsGrid={projectsGrid}/>} />
           <Route path="/studio" element={<Studio />} />
           <Route
             path="/realisations"
-            element={<Realisations projectsGrid={projectsGrid} rowSize={34}/>}
+            element={<Realisations projectsGrid={projectsGrid}/>}
           />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Error />} />
