@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ProjectsInterface } from "../../models/ProjectsInterface";
+import ProjectsGrid from "../../models/ProjectsGridInterface";
 import ContactIndex from "../layout/ContactIndex";
 import IntroIndex from "../layout/IntroIndex";
 import Projects from "../layout/Projects";
 import Tryptique from "../layout/Tryptique";
 
-const Home: React.FC<ProjectsInterface> = (props) => {
+interface HomeProps {
+  projectsGrid: ProjectsGrid
+}
+
+const Home: React.FC<HomeProps> = (props) => {
   const { grid, projects } = props.projectsGrid;
 
   const projectsGrid = {

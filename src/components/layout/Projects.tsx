@@ -1,8 +1,13 @@
 import React from "react";
-import { ProjectsInterface } from "../../models/ProjectsInterface";
+import ProjectsGrid from "../../models/ProjectsGridInterface";
 import Project from "./Project";
 
-const Projects: React.FC<ProjectsInterface> = (props) => {
+interface ProjectsProps {
+  projectsGrid:ProjectsGrid,
+  rowSize: number;
+}
+
+const Projects: React.FC<ProjectsProps> = (props) => {
   const { projects, grid } = props.projectsGrid;
   const rowSize = props.rowSize;
 

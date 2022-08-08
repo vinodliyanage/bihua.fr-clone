@@ -1,8 +1,12 @@
 import React from "react";
 import Projects from "../layout/Projects";
-import { ProjectsInterface } from "../../models/ProjectsInterface";
+import ProjectsGrid from "../../models/ProjectsGridInterface";
 
-const Realisations: React.FC<ProjectsInterface> = (props) => {
+interface RealisationsProps {
+  projectsGrid: ProjectsGrid
+}
+
+const Realisations: React.FC<RealisationsProps> = (props) => {
   return (
     <section className="realisations">
       <section className="realisations__hero">
