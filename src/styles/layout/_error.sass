@@ -1,0 +1,43 @@
+.error
+    margin-top: 16px
+    margin-bottom: 16px
+
+    &__wrapper
+        display: grid
+        grid-column-gap: 16px
+        min-height: 70vh
+        grid-template-columns: 1fr 1fr
+        align-content: center
+
+    &-code
+        font-size: 300px
+        line-height: 357px
+        font-family: "GrandSlang", Arial, Helvetica, sans-serif
+        -webkit-text-stroke: 2px #eee
+        text-shadow: 2px 0 #eee, 0 2px #eee, 2px 0 #eee, 0 -2px #eee
+        background-color: #090909
+        color: #090909
+        text-align: right
+
+    &-title
+        font-family: "SuisseIntl", Arial, Helvetica, sans-serif
+        font-size: 60px
+        line-height: 65px
+        margin-bottom: 32px
+
+    @include mobile
+        &__wrapper
+            grid-template-columns: 1fr
+
+        &-code
+            grid-row: 1
+            text-align: center
+            font-size: calc(20vw + 16px)
+            -webkit-text-stroke: 1px #eee
+            text-shadow: 1px 0 #eee, 0 1px #eee, 1px 0 #eee, 0 -1px #eee
+
+        &-content
+            font-size: 25px
+
+        &__content__container
+            grid-row: 2
