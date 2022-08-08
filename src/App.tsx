@@ -30,7 +30,7 @@ const App: React.FC = () => {
             element={<Realisations projectsGrid={projectsGrid} rowSize={34}/>}
           />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/error-404" element={<Error />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </Router>
       <Footer />
